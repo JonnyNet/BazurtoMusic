@@ -41,7 +41,9 @@
   <ItemGroup>
     <Compile Include="Cancion.cs" />
     <Compile Include="Catalogo.cs" />
-    <Compile Include="CD.cs" />
+    <Compile Include="Factura.cs" />
+    <Compile Include="IPago.cs" />
+    <Compile Include="Music.cs" />
     <Compile Include="Disco.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

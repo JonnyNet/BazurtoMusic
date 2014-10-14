@@ -5,10 +5,10 @@ using System.Text;
 
 namespace Negocio
 {
-    public class Disco : CD
+    public class Disco : Music
     {
         private List<Cancion> canciones;
-
+        private bool estado;
         public int Nuntrack { get; set; }
 
         public Disco():base()
@@ -33,6 +33,7 @@ namespace Negocio
             this.Duracion = this.Duracion + cancion.Duracion;
             this.Precio = this.Precio + cancion.Precio;
             this.Tamaño = this.Tamaño + cancion.Tamaño;
+            this.Interprete += cancion.Interprete + ", ";
             canciones.Add(cancion);
         }
 
@@ -70,6 +71,8 @@ namespace Negocio
         {
             return base.GetHashCode();
         }
+
+        
 
 
         public override void ContarVenta()
