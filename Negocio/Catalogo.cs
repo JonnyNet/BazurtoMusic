@@ -9,28 +9,27 @@ namespace Negocio
     public class Catalogo
     {
 
-        public String Genero { get; set; }
+        public String Seccion { get; set; }
         public List<Disco> Discos { get; set; }
 
         public Catalogo(String genero, List<Disco> discos)
         {
-            Genero = genero;
+            Seccion = genero;
             Discos = discos;
         }
 
         public Catalogo()
         {
-            Genero = "Genero";
+            Seccion = "Genero";
             Discos = null;
         }
 
         public override string ToString()
         {
-            String cadena = "Genero: " + Genero + "\n" + "Discos: " + "\n\t";
+            String cadena = "Genero: " + Seccion + "\n" + "Discos: " + "\n\t";
             foreach(Disco d in Discos)
             {
-                
-
+                cadena += d.Titulo + "\n\t";
             }
             return cadena;
                 
@@ -38,7 +37,12 @@ namespace Negocio
 
         public override bool Equals(object obj)
         {
-            return base.Equals(obj);
+            Catalogo c = (Catalogo) obj;
+            if (Seccion == c.Seccion && Discos == c.Discos)
+                return true;
+
+
+            return false;
         }
 
         public override int GetHashCode()

@@ -8,19 +8,28 @@ namespace Negocio
     public class Factura
     {
         private IPago Pago;
-        private Disco Cd;
+        private OrdenCompra orden;
         private Usuario User;
 
-        public Factura(IPago pago, Disco disco, Usuario usuario)
+        public Factura(IPago pago, OrdenCompra orden, Usuario usuario)
         {
             this.Pago = pago;
-            this.Cd = disco;
+            this.orden = orden;
             this.User = usuario;
         }
 
         private void facturar() 
         {
-            Int32 total = Cd.Precio;
+            Int32 total = 0;
+            List<Disco> lista = orden.VerDiscos();
+            foreach(Disco d in lista)
+            {
+                total = total + d.Precio;
+                d.ContarVenta();
+            }
+            Pago.RealizarPago(total);
         }
+
+        
     }
 }

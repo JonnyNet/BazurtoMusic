@@ -1,76 +1,64 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Negocio.Catalogo">
-    <Position X="3" Y="0.5" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Properties" Collapsed="true" />
-      <Compartment Name="Methods" Collapsed="true" />
-    </Compartments>
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEgAAAAAIAAAAAAIAAAIAAAAAAAAA=</HashCode>
-      <FileName>Catalogo.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Negocio.Usuario">
-    <Position X="1.25" Y="0.5" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Properties" Collapsed="true" />
-      <Compartment Name="Methods" Collapsed="true" />
-    </Compartments>
-    <TypeIdentifier>
-      <HashCode>EAAAAAAAACAAAAIEgAAAgAAAAAAAAIACAAAAAAAAAAQ=</HashCode>
-      <FileName>Usuario.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Negocio.Disco">
-    <Position X="4.75" Y="2.5" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Fields" Collapsed="true" />
-      <Compartment Name="Properties" Collapsed="true" />
-      <Compartment Name="Methods" Collapsed="true" />
-    </Compartments>
-    <TypeIdentifier>
-      <HashCode>AAAACAAAAAAAAgAEoAAAAAACAAAAIIAAACAAAAAAAAA=</HashCode>
-      <FileName>Disco.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="Negocio.Cancion">
-    <Position X="8.25" Y="2.5" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Properties" Collapsed="true" />
-      <Compartment Name="Methods" Collapsed="true" />
-    </Compartments>
+    <Position X="4.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAgAAAAAAAQAAAAEoAgAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
       <FileName>Cancion.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Negocio.Music">
-    <Position X="6.5" Y="0.5" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Properties" Collapsed="true" />
-      <Compartment Name="Methods" Collapsed="true" />
-    </Compartments>
+  <Class Name="Negocio.Catalogo">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAEgAAAAAAAAAAAAIAAAIAAAAAAAAA=</HashCode>
+      <FileName>Catalogo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Negocio.Disco">
+    <Position X="6.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAgAEoAAAAAACAAAAIIAAACAAAAAAAAA=</HashCode>
+      <FileName>Disco.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Negocio.Factura">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABABAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Factura.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Negocio.Music" Collapsed="true">
+    <Position X="5.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AABAAIAAAAAAAAAEoAAAAAIQAAABAIAAAAgAAAAAABA=</HashCode>
       <FileName>Music.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Negocio.Factura">
-    <Position X="9.75" Y="0.5" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Methods" Collapsed="true" />
-    </Compartments>
+  <Class Name="Negocio.OrdenCompra">
+    <Position X="8.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAgBAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
-      <FileName>Factura.cs</FileName>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAEAAAgAAAAIAAAAAAAAA=</HashCode>
+      <FileName>OrdenCompra.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Negocio.PagoOnline" BaseTypeListCollapsed="true">
+    <Position X="12" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>PagoOnline.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Negocio.Usuario">
+    <Position X="1" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAACAAAAIEgAAAgAAAAAAAAIACAAAAAAAAAAQ=</HashCode>
+      <FileName>Usuario.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="Negocio.IPago">
-    <Position X="11.5" Y="0.5" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Methods" Collapsed="true" />
-    </Compartments>
+    <Position X="13.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
       <FileName>IPago.cs</FileName>

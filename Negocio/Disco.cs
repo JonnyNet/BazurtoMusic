@@ -62,6 +62,7 @@ namespace Negocio
                     return true;
             }catch(NullReferenceException e)
             {
+                Console.WriteLine(e);
                 return false;
             }
             return false;
