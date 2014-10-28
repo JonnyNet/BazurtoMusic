@@ -6,11 +6,17 @@ using System.Threading.Tasks;
 
 namespace Negocio
 {
-    public class PagoOnline: IPago
+    public class PagoCredito: IPago
     {
+        String Nombre { get; set; }
+
+        public PagoCredito(String nombre)
+        {
+            Nombre = nombre;
+        }
+
         public bool RealizarPago(int valor)
         {
-            ///aqui va la logica del pago en linea
             return true;
         }
     }

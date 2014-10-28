@@ -17,6 +17,17 @@ namespace Datos
             return usuario;
         }
 
+
+        public IEnumerable<IPago>getPagos()
+        {
+            List<IPago> pagos = new List<IPago>();
+
+            pagos.Add(new PagoCredito("Targeta de Credito"));
+            pagos.Add(new PagoDebito("Targeta Debito"));
+            return pagos;
+        }
+
+
         public IEnumerable<Cancion> getCancion()
         {
             List<Cancion> canciones = new List<Cancion>();

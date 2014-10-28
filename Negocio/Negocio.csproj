@@ -46,7 +46,8 @@
     <Compile Include="Music.cs" />
     <Compile Include="Disco.cs" />
     <Compile Include="OrdenCompra.cs" />
-    <Compile Include="PagoOnline.cs" />
+    <Compile Include="PagoCredito.cs" />
+    <Compile Include="PagoDebito.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

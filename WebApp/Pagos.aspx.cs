@@ -23,7 +23,6 @@ namespace WebApp
             if (Session["orden"] != null)
             {
                 orden = (OrdenCompra)Session["orden"];
-                prueba.Text = orden.ToString();
 
             }
         }
