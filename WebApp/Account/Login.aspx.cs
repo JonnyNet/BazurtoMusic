@@ -6,6 +6,8 @@ using Microsoft.AspNet.Identity.Owin;
 using Owin;
 using WebApp.Models;
 using Negocio;
+using Datos;
+using System.Collections.Generic;
 
 namespace WebApp.Account
 {
@@ -26,17 +28,31 @@ namespace WebApp.Account
             String user = Usuario.Text;
             String pass = Password.Text;
 
+            IEnumerable<Usuario> listusuarios = (IEnumerable<Usuario>)Datos.Datos.getUsuario();
+
             if (!user.Equals("") && !pass.Equals(""))
             {
-                if (orden != null)
+
+                foreach(Usuario value in listusuarios)
                 {
-                    Session["user"] = user;
-                    Server.Transfer("/Pagos.aspx", true);
-                }
-                else
-                {
-                    Session["user"] = user;
-                    Server.Transfer("/Musica.aspx", true);
+                    if(value.Nombre.Equals(user) && value.Password.Equals(pass))
+                    {
+                        if (orden != null)
+                        {
+                            Session["user"] = user;
+                            Server.Transfer("/Pagos.aspx", true);
+                        }
+                        else
+                        {
+                            Session["user"] = user;
+                            Server.Transfer("/Musica.aspx", true);
+                        }
+                    }
+                    else
+                    {
+                        FailureText.Text = "Error usuario o contraseña incorrectos";
+                        ErrorMessage.Visible = true;
+                    }
                 }
             }
             else

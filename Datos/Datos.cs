@@ -9,6 +9,13 @@ namespace Datos
 {
     public class Datos
     {
+        public static IEnumerable<Usuario> getUsuario()
+        {
+            List<Usuario> usuario = new List<Usuario>();
+            Usuario user = new Usuario("User", "user", "02-10-2003", "Standar", "usuario@miweb.com", 1047567345);
+            usuario.Add(user);
+            return usuario;
+        }
 
         public IEnumerable<Cancion> getCancion()
         {

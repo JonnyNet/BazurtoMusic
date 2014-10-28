@@ -26,7 +26,7 @@ namespace WebApp
             OrdenCompra orden = new OrdenCompra();
 
             ObjectDataSource grid1 = ObjectDataSource1;
-            IEnumerable<Disco> o = (IEnumerable<Disco>)grid1.Select();
+            IEnumerable<Disco> lista1 = (IEnumerable<Disco>)grid1.Select();
 
             for (int i = 0; i < GridView1.Rows.Count; i++)
             {
@@ -35,14 +35,14 @@ namespace WebApp
 
                 if (check.Checked)
                 {
-                    Disco aux = o.ElementAt(i);
+                    Disco aux = lista1.ElementAt(i);
                     orden.AgregarDisaco(aux);
                 }
             }
 
 
             ObjectDataSource grid2 = ObjectDataSource2;
-            IEnumerable<Cancion> u = (IEnumerable<Cancion>)grid2.Select();
+            IEnumerable<Cancion> lista2 = (IEnumerable<Cancion>)grid2.Select();
 
             for (int i = 0; i < GridView2.Rows.Count; i++)
             {
@@ -51,23 +51,21 @@ namespace WebApp
 
                 if (check.Checked)
                 {
-                    Cancion aux = u.ElementAt(i);
+                    Cancion aux = lista2.ElementAt(i);
                     orden.AgregarDisaco(aux);
                 }
             }
-            prueba.Text = orden.ToString();
-
 
             if (user != null)
             {
                 Session["orden"] = orden;
-                Server.Transfer("/Pagos.aspx", true);
+                Server.Transfer("/Pagos.aspx");
 
             }
             else
             {
                 Session["orden"] = orden;
-                Server.Transfer("Account/Login.aspx", true);
+                Server.Transfer("Account/Login.aspx");
             }
 
         }

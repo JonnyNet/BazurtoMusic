@@ -74,7 +74,7 @@
     
 
 
-    <asp:Button ID="Comprar" runat="server" CssClass="btn-primary" OnClick="Button1_Click" Text="Comprar" BorderColor="#999966" BorderStyle="Solid" ToolTip="Comprar" />
+    <asp:Button ID="Comprar" runat="server" CssClass="btn-primary" OnClick="Button1_Click" Text="Comprar" BorderColor="#999966" BorderStyle="Solid" ToolTip="Comprar"/>
     
 
 
