@@ -5,42 +5,46 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Owin;
 using WebApp.Models;
+using Negocio;
 
 namespace WebApp.Account
 {
     public partial class Login : Page
     {
+        OrdenCompra orden;
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            RegisterHyperLink.NavigateUrl = "Register";
-            // Habilite esta opción una vez tenga la confirmación de la cuenta habilitada para la funcionalidad de restablecimiento de contraseña
-            // ForgotPasswordHyperLink.NavigateUrl = "Forgot";
-            OpenAuthLogin.ReturnUrl = Request.QueryString["ReturnUrl"];
-            var returnUrl = HttpUtility.UrlEncode(Request.QueryString["ReturnUrl"]);
-            if (!String.IsNullOrEmpty(returnUrl))
+            if (Session["orden"] != null)
             {
-                RegisterHyperLink.NavigateUrl += "?ReturnUrl=" + returnUrl;
+                orden = (OrdenCompra)Session["orden"];
             }
         }
 
         protected void LogIn(object sender, EventArgs e)
         {
-            if (IsValid)
+            String user = Usuario.Text;
+            String pass = Password.Text;
+
+            if (!user.Equals("") && !pass.Equals(""))
             {
-                // Validar la contraseña del usuario
-                var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
-                ApplicationUser user = manager.Find(Email.Text, Password.Text);
-                if (user != null)
+                if (orden != null)
                 {
-                    IdentityHelper.SignIn(manager, user, RememberMe.Checked);
-                    IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
+                    Session["user"] = user;
+                    Server.Transfer("/Pagos.aspx", true);
                 }
                 else
                 {
-                    FailureText.Text = "Nombre de usuario o contraseña no válidos.";
-                    ErrorMessage.Visible = true;
+                    Session["user"] = user;
+                    Server.Transfer("/Musica.aspx", true);
                 }
             }
+            else
+            {
+                FailureText.Text = "Llene los campos Email y Password";
+                ErrorMessage.Visible = true;
+            }
+
         }
     }
 }

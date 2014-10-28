@@ -4,7 +4,6 @@
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <h2><%: Title %>.</h2>
-
     <div class="row">
         <div class="col-md-8">
             <section id="loginForm">
@@ -17,11 +16,11 @@
                         </p>
                     </asp:PlaceHolder>
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="Email" CssClass="col-md-2 control-label">Correo electrónico</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="Usuario" CssClass="col-md-2 control-label">Usuario</asp:Label>
                         <div class="col-md-10">
-                            <asp:TextBox runat="server" ID="Email" CssClass="form-control" TextMode="Email" />
-                            <asp:RequiredFieldValidator runat="server" ControlToValidate="Email"
-                                CssClass="text-danger" ErrorMessage="El campo de correo electrónico es obligatorio." />
+                            <asp:TextBox runat="server" ID="Usuario" CssClass="form-control"  />
+                            <asp:RequiredFieldValidator runat="server" ControlToValidate="Usuario"
+                                CssClass="text-danger" ErrorMessage="El campo Usuario es obligatorio." />
                         </div>
                     </div>
                     <div class="form-group">

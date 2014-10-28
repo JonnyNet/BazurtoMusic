@@ -11,17 +11,20 @@ namespace Negocio
 
         public String Seccion { get; set; }
         public List<Disco> Discos { get; set; }
+        public List<Cancion> Canciones { get; set; }
 
-        public Catalogo(String genero, List<Disco> discos)
+        public Catalogo(String genero, List<Disco> discos, List<Cancion> canciones)
         {
             Seccion = genero;
             Discos = discos;
+            Canciones = canciones;
         }
 
         public Catalogo()
         {
             Seccion = "Genero";
-            Discos = null;
+            Discos = new List<Disco>();
+            Canciones = new List<Cancion>();
         }
 
         public override string ToString()

@@ -15,14 +15,14 @@ namespace Negocio
         public long Cantvendida { get; set; }
         public double Duracion { get; set; }
 
-        public Music(string genero, string interprete, Int32 precio, Int32 tamaño, string titulo)
+        public Music(string genero, string interprete, Int32 precio, Int32 tamaño, string titulo, double duracion)
         {
             Titulo = titulo;
             Interprete = interprete;
             Tamaño = tamaño;
             Genero = genero;
             Precio = precio;
-            Duracion = 0;
+            Duracion = duracion;
             Cantvendida = 0;
         }
 

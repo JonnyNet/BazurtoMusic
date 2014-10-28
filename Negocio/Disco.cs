@@ -8,19 +8,18 @@ namespace Negocio
     public class Disco : Music
     {
         private List<Cancion> canciones;
-        private bool estado;
         public int Nuntrack { get; set; }
 
         public Disco():base()
         {
-            canciones = null;
+            canciones = new List<Cancion>();
             Nuntrack = 0;
         }
 
-        public Disco(String genero, String titulo, List<Cancion> canciones)
+        public Disco(String genero, String titulo)
             : base(genero,titulo)
         {
-            this.canciones = canciones;
+            canciones = new List<Cancion>();
         }
 
         public List<Cancion> Canciones
@@ -33,8 +32,9 @@ namespace Negocio
             this.Duracion = this.Duracion + cancion.Duracion;
             this.Precio = this.Precio + cancion.Precio;
             this.Tamaño = this.Tamaño + cancion.Tamaño;
-            this.Interprete += cancion.Interprete + ", ";
+            this.Interprete = "Varios";
             canciones.Add(cancion);
+            Nuntrack = canciones.Count;
         }
 
         

@@ -12,7 +12,7 @@ namespace Negocio
         public String Ruta { get; set; }
 
         public Cancion(double duracion, String genero, String interprete, Int32 precio, Int32 tamaño, String titulo, double calidad, String autor, String url)
-            : base(genero,interprete,precio,tamaño,titulo)
+            : base(genero,interprete,precio,tamaño,titulo,duracion)
         {
             Calidad = calidad;
             Autor = autor;
